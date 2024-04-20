@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="Cart.js"></script>
+    <!-- <script src="Basic.js"></script> -->
+    <title>ASM2 Web Design</title>
+</head>
+<body>
+    <div class="Top">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid" style="padding: 0px 1rem 0px 2rem;">
+          <a class="navbar-brand" href="Main.html"><img  src="Images/Menu/logo_2024_new_den_44d720a5522f430b8f06d5a8d6709f6a.svg" alt=""></a>
+          <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header ">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body ">
+              <ul class="navbar-nav   flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link "  aria-current="page" href="Main.html">HOME</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link " href="">MAN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Women.html">WOMAN</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Child.html">CHILD</a>
+                </li>
+                <!-- Dropdown -->
+              </ul>
+            </div>
+            
+          </div>
+          
+          <div class="container-input align-items-center ">
+            <input type="search" placeholder="Search" name="text" class="input">
+            <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+              <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+           </svg>
+          </div> 
+          <div class="User" style="margin-left: 1.2%;">
+            <a href=""  role="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="Images/Menu/user-solid-24.png" alt=""></a>
+            <ul class="User-dropdown" aria-labelledby="dropdownUser">
+              <li class="User-item"><a href="Profile.html" id="profileLink">Profile</a></li>
+              <li class="User-item"><a href="index.html">Log out</a></li>
+            </ul>
+          </div>
+
+          <div class="Cart " style="margin-left: 1.2%;">
+              <a class="Cart1" href=""><img src="Images/Menu/shopping-cart.png" alt=""></a>
+          </div> 
+          <button class="navbar-toggler align-items-center flex-md-row-reverse"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+    
+    
+    <!-- SLIDER -->
+    
+    <!-- SẢN PHẨM -->
+    <div class="Main-contents container-fluid">
+      
+      <div class="Text-product"><h4  style="text-transform: uppercase; margin-left: 2rem; color: brown;">Men's shirts 〉</h4></div>
+      <ul class=" row products">
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/Shirt1.jpg" alt="">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Shirt Pastel Premium Unisex </a>
+              <a href="" class="producer">Created and sold at TIXIC</a>
+              <div class="product-price">$2.99,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/Shirt2.jpg" alt="">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name"> Abandon Collar Shirt</a>
+              <a href="" class="producer">Created and sold at Han_Shop</a>
+              <div class="product-price">$1.99,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/Shirt3.jpg" alt="">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Loose Buttoned Raglan Long Sleeve Shirt</a>
+              <a href="" class="producer">Created and sold at Dolphin_Shop</a>
+              <div class="product-price">$1.50,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/Shirt4.jpg" alt="">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">PATIO long-sleeved loose shirt for men and women</a>
+              <a href="" class="producer">Created and sold at Panda_Shop</a>
+              <div class="product-price">$0.99,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/Shirt5.jpg" alt="Kính chữ V">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Fashionable Loose Half Sleeve Shirt</a>
+              <a href="" class="producer">Created and sold at Tiger_Shop</a>
+              <div class="product-price">$2.45,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/Shirt6.jpg" alt="Áo khoác unisex">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">HANOI CYPHER Handbag Shirt </a>
+              <a href="" class="producer">Created and sold at Eagle_Shop</a>
+              <div class="product-price">$3.00,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/Shirt7.jpg" alt="Quần thể thao hai sọc cho nam">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Fashionable loose long-sleeved men's shirt </a>
+              <a href="" class="producer">Created and sold at Turtle_Shop</a>
+              <div class="product-price">$3.99,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/Shirt8.jpg" alt="Quần kaki ống rộng">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Men's loose long-sleeved unisex shirt</a>
+              <a href="" class="producer">Created and sold at Cat_Shop</a>
+              <div class="product-price">$1.99,00</div>
+            </div>
+          </product-item>
+        </li>
+      </ul>
+      <!-- ============================================================================== -->
+      <h4 style="text-transform: uppercase; margin-left: 2rem; color: brown;">Men's T-shirts 〉</h4>
+      <ul class=" row products">
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/T-shirt1.jpg" alt="">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Retro Short Sleeve T-shirt </a>
+              <a href="" class="producer">Created and sold at TIXIC</a>
+              <div class="product-price">$2.99,00</div>
+            </div>
+          </product-item>
+        </li>
+        <li class="col-6 col-sm-3">
+            <product-item>
+              <div class="product-top">
+                <a href="" class="product-thumb">
+                  <img src="Images/Man/T-shirt4.jpg" alt="Dép bánh mì khủng long">
+                </a>
+                <!--Mua ngay-->
+                <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+              </div>
+              <div class="product-info">
+                <a href="" class="product-name">Men's T-shirts, men's short-sleeved T-shirts</a>
+                <a href="" class="producer">Created and sold at Panda_Shop</a>
+                <div class="product-price">$0.99,00</div>
+              </div>
+            </product-item>
+        </li>
+
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/T-shirt2.jpg" alt="">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name"> Angel Devil short sleeve t-shirt for men and women</a>
+              <a href="" class="producer">Created and sold at Han_Shop</a>
+              <div class="product-price">$1.99,00</div>
+            </div>
+          </product-item>
+        </li>
+        
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/T-shirt3.jpg" alt="Quần bò ống xuông nam">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Unisex TOM men's t-shirt</a>
+              <a href="" class="producer">Created and sold at Dolphin_Shop</a>
+              <div class="product-price">$1.50,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/T-shirt5.jpg" alt="Kính chữ V">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Simple Loose Short-Sleeved T-shirt</a>
+              <a href="" class="producer">Created and sold at Tiger_Shop</a>
+              <div class="product-price">$2.45,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/T-shirt6.jpg" alt="Áo khoác unisex">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Round Neck Short Sleeve Cotton T-shirt </a>
+              <a href="" class="producer">Created and sold at Eagle_Shop</a>
+              <div class="product-price">$3.00,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/T-shirt7.jpg" alt="Quần thể thao hai sọc cho nam">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Men's cotton t-shirt with short sleeves </a>
+              <a href="" class="producer">Created and sold at Turtle_Shop</a>
+              <div class="product-price">$3.99,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/T-shirt8.jpg" alt="Quần kaki ống rộng">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Vans Summer Unisex loose t-shirt for men and women</a>
+              <a href="" class="producer">Created and sold at Cat_Shop</a>
+              <div class="product-price">$1.99,00</div>
+            </div>
+          </product-item>
+        </li>
+      </ul>
+        <!-- ============================================================================================= -->
+      <h4 style="text-transform: uppercase; margin-left: 2rem; color: brown;">Men's jeans 〉</h4>
+      <ul class=" row products">
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/JeanMan1.jpg" alt="">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Classic men's straight baggy jeans</a>
+              <a href="" class="producer">Created and sold at TIXIC</a>
+              <div class="product-price">$2.99,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/JeanMan2.jpg" alt="">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Classic men's straight baggy jeans</a>
+              <a href="" class="producer">Created and sold at Han_Shop</a>
+              <div class="product-price">$1.99,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="https://down-vn.img.susercontent.com/file/sg-11134201-7rbkp-lm7i4lxrdfzt03" alt="Quần bò ống xuông nam">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Men's straight-leg jeans</a>
+              <a href="" class="producer">Created and sold at Dolphin_Shop</a>
+              <div class="product-price">$1.50,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/JeanMan3.jpg" alt="Dép bánh mì khủng long">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Unisex high-waisted wide-leg jeans for men and women</a>
+              <a href="" class="producer">Created and sold at Panda_Shop</a>
+              <div class="product-price">$0.99,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/JeanMan4.jpg" alt="Kính chữ V">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Baggy Jeans with 8 pockets for Men</a>
+              <a href="" class="producer">Created and sold at Tiger_Shop</a>
+              <div class="product-price">$2.45,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="Images/Man/JeanMan5.jpg" alt="Áo khoác unisex">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+                <a href="" class="product-name">Fashionable ripped pants American street style</a>
+                <a href="" class="producer">Created and sold at Eagle_Shop</a>
+              <div class="product-price">$3.00,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lll2dq3yp1e751" alt="Quần thể thao hai sọc cho nam">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Two-stripe sweatpants for men</a>
+              <a href="" class="producer">Created and sold at Turtle_Shop</a>
+              <div class="product-price">$3.99,00</div>
+            </div>
+          </product-item>
+        </li>
+  
+        <li class="col-6 col-sm-3">
+          <product-item>
+            <div class="product-top">
+              <a href="" class="product-thumb">
+                <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lepwklt6vdma22" alt="Quần kaki ống rộng">
+              </a>
+              <!--Mua ngay-->
+              <a href="" class="Mua-ngay"><box-icon name='cart-add' type='solid' animation='tada' ></box-icon></a>
+            </div>
+            <div class="product-info">
+              <a href="" class="product-name">Wide leg khaki pants</a>
+              <a href="" class="producer">Created and sold at Cat_Shop</a>
+              <div class="product-price">$1.99,00</div>
+            </div>
+          </product-item>
+        </li>
+      </ul>
+<!-- ====================================================================================================================================================================== -->
+      
+      <!--Phần 3: phần này để chuyển form sang list sản phẩm khác-->
+   
+  </div>
+  <div class="lines"></div>
+ 
+    <ul class="Maybeyouwanttofindsomething">
+      <li>
+        <h3>Latest men's fashion clothing - Personality fashion style for men</h3>
+        <p>In recent years, men's fashion trends have become much more diverse and rich. We must mention styles such as elegant office style, minimalist Minimalism style, especially Street Style outfits that are extremely popular. Each style has its own highlight and is suitable for each event attended. You can completely transform from a simple Preppy style into a trendy gentleman with a high-class suit. Or middle-aged men's fashion with neutral colors becomes "stylish" with Korean outfits with just a branded men's t-shirt.</p>
+        <p>In particular, Street Style is being chosen by many Fashionistas or Korean stars when appearing in public. Why is this trend so popular? First of all, it cannot be denied that this style brings extreme comfort to the wearer, but also unleashes creativity in coordinating clothes and choosing arbitrary men's shirt sizes. You can be the leader in creating unique and attractive men's fashion styles. You will become unique with a Korean branded t-shirt and shorts, or a "cool" guy with a sports suit and sneakers, the "All Black" style combined with men's accessories is also a of great choices if you want to be stylish. It's not too complicated to become a fashionista. Let's look at what men's clothing items you already have in your closet and create your own "so-and-so" outfit. BILUXURY now!</p>        
+      </li>
+      <li>
+        <h3>The secret to choosing extremely stylish men's fashion clothing products</h3>
+        <p>High quality men's fashion products always aim for a strong, modern and masculine fashion style for men. That's why these men's fashion products not only bring comfort to the wearer but also exude luxury and elegance. So what is the secret to choosing fashion products to become a genuine Fashionista?</p>
+        <p>Choose products designed from reputable fashion brands: When it comes to trendy men's fashion products, anyone can identify with brand lines such as Lacoste, Polo Ralph Lauren, Abercrombie & Fitch,... These brands not only bring beauty to the wearer, but also bring confidence to those who use them. Wearing a trendy product will help boys become more classy and attractive</p>
+        <p>Choose branded products: The first reason why consumers love and choose branded men's fashion clothing products is because of its quality. With sophisticated design, high-quality soft materials, and youthful and dynamic style, branded men's fashion products are not only eye-catching in style and color, but also bring comfort and confidence to the user. use.</p>
+        <p>Competitive product prices: Prices of branded men's fashion products are always top priority. Just like other product lines, designers and manufacturers try to bring men's clothing at the best prices to customers.</p>
+      </li>
+
+      <li>
+        <h3>Order genuine branded men's fashion clothing products at BILUXURY today</h3>
+        <p>Choosing and ordering genuine branded men's fashion clothing products has become very simple in the current 4.0 technology era. You don't need to waste time going to the store to shop. You can absolutely sit at home and choose high-quality, high-quality men's clothing products with just one click.</p>
+        <p>5S FASHION with simple ordering procedures and quick delivery. In addition, Shopee also has many discount programs, free shipping, shocking Xtra Voucher promotions, and refunds for genuine 5S FASHION Mall products, bringing you exciting shopping experiences. taste. Come to Shopee.vn and choose for yourself stylish branded men's t-shirt fashion products today. The job is simple, just select the product and put it in the online shopping cart, BILUXURY.vn will deliver the goods to you quickly. Come to BILUXURY.vn now to buy.</p>
+      </li>
+    </ul>
+    <div class="lines"></div>
+    <!--Phần chăm sóc khách hàng-->
+  <div class=" row finally2">
+    <ul class="Customer-care col-6 col-sm-3">
+      <h3>About customer care</h3>
+      <li class="Customer-care1"><a href="">Support center</a></li>
+      <li class="Customer-care1"><a href="">BILUXURY blog</a></li>
+      <li class="Customer-care1"><a href="">BILUXURY</a></li>
+      <li class="Customer-care1"><a href="">Shopping guide</a></li>
+      <li class="Customer-care1"><a href="">Payment Guide</a></li>
+      <li class="Customer-care1"><a href="">Returns and refunds</a></li>
+      <li class="Customer-care1"><a href="">Warranty Policy</a></li>
+      <li class="Customer-care1"><a href="">BILUXURY xu</a></li>
+    </ul> 
+    <ul class="FASHION col-6 col-sm-2">
+      <h3>About BILUXURY</h3>
+      <li class="Customer-care2"><a href="">Introducing BILUXURY</a></li>
+      <li class="Customer-care2"><a href="">Recruitment</a></li>
+      <li class="Customer-care2"><a href="">BILUXURY Terms</a></li>
+      <li class="Customer-care2"><a href="">Privacy Policy</a></li>
+      <li class="Customer-care2"><a href="">Flash sale</a></li>
+      <li class="Customer-care2"><a href="">Contact the media</a></li>
+    </ul>
+   
+    <ul class="PayAndShipping grid-container col-6 col-sm-2">
+      <h3>Pay</h3>
+      <li class="img-pay grid-item"><img src="https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8" alt=""></li>
+      <li class="img-pay grid-item"><img src="https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16" alt=""></li>
+      <li class="img-pay grid-item"><img src="https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08" alt=""></li>
+      <li class="img-pay grid-item"><img src="https://down-vn.img.susercontent.com/file/2c46b83d84111ddc32cfd3b5995d9281" alt=""></li>
+      <li class="img-pay grid-item"><img src="https://down-vn.img.susercontent.com/file/bc2a874caeee705449c164be385b796c" alt=""></li>
+      <li class="img-pay grid-item"><img src="https://down-vn.img.susercontent.com/file/5e3f0bee86058637ff23cfdf2e14ca09" alt=""></li>
+    </ul>
+   
+    <ul class="follow col-6 col-sm-5">
+      <h3> <!-- <h3></h3> : Is a element and in this example, the first <h3> is Opening tag-->
+        Follow us
+      </h3> <!--This is a Closing tag -->
+      <li class="follow1 ">
+        <a href="">
+          <img src="https://down-vn.img.susercontent.com/file/2277b37437aa470fd1c71127c6ff8eb5" alt="">
+          Facebook
+        </a>
+      </li>
+
+      <li class="follow1">
+        <a href="">
+          <img src="https://down-vn.img.susercontent.com/file/5973ebbc642ceee80a504a81203bfb91" alt="">
+          Instagram
+        </a>
+      </li>
+
+      <li class="follow1">
+        <a href="">
+          <img src="https://down-vn.img.susercontent.com/file/f4f86f1119712b553992a75493065d9a" alt="">
+          Linkedln
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+ 
+<div class="CartForm">
+  <div class="CartOverlay"></div>
+  <div class="CartBody">
+      <div class="cart">
+        <div class="Cart-header row">
+          <h2 class="cart-title col-7" > Cart</h2>
+          <a class="CloseCart col-4" href="">
+            <img src="Images/close.png" alt="" height="15px" width="15px">
+          </a>
+        </div>
+        <!-- Main contents -->
+        <div class="Cartcontent">
+          
+        </div>
+        <!-- Total -->
+        <div class="lines"></div>
+        <div class="total-overall">
+          <div class="Total row">
+            <div class="Totaltitle col-10" style="left: 0;">Total</div>
+            <div class="Totalprice col-2">$0</div>
+          </div>
+          <!-- Buy button -->
+            <button type="button" class="btn-buy">Buy now</button>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="CartForm">
+        <div class="CartOverlay"></div>
+        <div class="CartBody">
+            <div class="cart">
+              <div class="Cart-header">
+                <h2 class="cart-title">Your cart</h2>
+                <a class="CloseCart" href="">
+                  <img src="Images/close.png" alt="" height="15px" width="15px">
+                </a>
+              </div>
+              <!-- Main contents -->
+              <div class="Cartcontent">
+                <div class="cartbox">
+                  <img src="Images/Man/Shirt1.jpg" alt="" class="cart-img">
+                  <div class="detail-box">
+                      <div class="cart-product-title">Earbuds</div>
+                      <div class="CartPrice">$25</div>
+                      <input type="number" value="1" class="Cartquantity" >
+                  </div>
+                      <box-icon class="CartRemove"  name='trash-alt'></box-icon>
+                </div>
+              </div>
+              <!-- Total -->
+              <div class="Total">
+                <div class="Totaltitle">Total</div>
+                <div class="Totalprice">$0</div>
+              </div>
+              <!-- Buy button -->
+                <button type="button" class="btn-buy">Buy now</button>
+            </div>
+        </div>
+      </div>
+</body>
+</html>
+<script>
+    
+
+  // -----------========================================--CART--------------------------
+  document.addEventListener('DOMContentLoaded', function () {
+    var CartButton = document.querySelector('.Cart1');
+    var CartForm = document.querySelector (`.CartForm`);
+    if (CartButton && CartForm) {
+             CartButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default behavior
+            CartForm.style.display = `flex`;
+        });
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var CloseCart = document.querySelector('.CloseCart');
+    var CartForm = document.querySelector('.CartForm');
+    if (CloseCart && CartForm) {
+            CloseCart.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default behavior
+            CartForm.style.display = `none`;
+        });
+    }
+  });
+
+//  CART WORKING JS
+document.addEventListener("DOMContentLoaded", function() {
+    // Lấy các phần tử cần thiết
+    const cartItems = document.querySelectorAll(".cartbox");
+    const totalPrice = document.querySelector(".Totalprice");
+    const buyButton = document.querySelector(".btn-buy");
+
+    // Xử lý sự kiện xóa sản phẩm
+    cartItems.forEach(function(item) {
+      const removeButton = item.querySelector(".CartRemove");
+      removeButton.addEventListener("click", function() {
+        item.remove();
+        updateTotalPrice();
+      });
+    });
+
+    // Xử lý sự kiện thay đổi số lượng sản phẩm
+    cartItems.forEach(function(item) {
+      const quantityInput = item.querySelector(".Cartquantity");
+      quantityInput.addEventListener("change", function() {
+        updateTotalPrice();
+      });
+    });
+
+    // Cập nhật tổng giá tiền
+    function updateTotalPrice() {
+      let total = 0;
+      cartItems.forEach(function(item) {
+        const price = parseFloat(item.querySelector(".CartPrice").textContent.replace("$", ""));
+        const quantity = parseInt(item.querySelector(".Cartquantity").value);
+        total += price * quantity;
+      });
+      totalPrice.textContent = "$" + total.toFixed(2);
+    }
+
+    // Xử lý sự kiện khi nhấn nút Mua ngay
+    buyButton.addEventListener("click", function() {
+      // Thực hiện hành động mua hàng
+    });
+  });
+</script>
